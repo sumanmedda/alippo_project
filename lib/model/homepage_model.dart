@@ -3,7 +3,11 @@ class HomepageAPIsModel {
   String? apiPath;
   String? priority;
 
-  HomepageAPIsModel({this.id, this.apiPath, this.priority});
+  HomepageAPIsModel({
+    this.id,
+    this.apiPath,
+    this.priority,
+  });
 
   HomepageAPIsModel.fromJson(Map<String, dynamic> json) {
     id = json['id'];
@@ -16,6 +20,7 @@ class HomepageAPIsModel {
     data['id'] = id;
     data['apiPath'] = apiPath;
     data['priority'] = priority;
+
     return data;
   }
 }

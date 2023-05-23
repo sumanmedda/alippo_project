@@ -1,8 +1,8 @@
 class HomapageAPIsPath {
   static List<dynamic> homepageAPIs = [
-    {"id": "1", "priority": "p1", "apiPath": "banners"},
-    {"id": "2", "priority": "p3", "apiPath": "mostvisited"},
-    {"id": "3", "priority": "p2", "apiPath": "mostpopular"}
+    {"id": "2", "apiPath": "/mostvisited", "priority": "mostvisited"},
+    {"id": "1", "apiPath": "/banners", "priority": "banners"},
+    {"id": "3", "apiPath": "/mostpopular", "priority": "mostpopular"},
   ];
 
   static List<dynamic> banners = [
@@ -82,39 +82,3 @@ class HomapageAPIsPath {
     }
   ];
 }
-
-/*
-class HomapageAPIsPath {
-  //apis
-  static List<dynamic> homepageAPIs = [
-    {
-      "homepageData": [
-        {
-          "banners": {
-            "id": "1",
-            "priority": 1,
-            "data": [
-              
-            ]
-          },
-          "mostvisited": {
-            "id": "2",
-            "priority": 3,
-            "data": [
-              
-            ]
-          },
-          "mostpopular": {
-            "id": "3",
-            "priority": 2,
-            "data": [
-              
-            ]
-          }
-        }
-      ],
-    }
-  ];
-}
-
-*/
