@@ -1,3 +1,4 @@
+import 'package:alippo_project/controller/const.dart';
 import 'package:alippo_project/view/mostpopularpage.dart';
 import 'package:flutter/material.dart';
 
@@ -12,9 +13,8 @@ class MostPopularWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
     return SizedBox(
-      height: size.height * 0.2,
+      height: msize(context).height * 0.2,
       child: ListView.builder(
           physics: const BouncingScrollPhysics(),
           scrollDirection: Axis.horizontal,
@@ -34,7 +34,10 @@ class MostPopularWidget extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const MostPopularPage(),
+                        builder: (context) => MostPopularPage(
+                            image: path.image!,
+                            title: path.title!,
+                            desc: path.description!),
                       ),
                     );
                   },
@@ -42,7 +45,7 @@ class MostPopularWidget extends StatelessWidget {
                     title: Text(path.title!),
                     subtitle: Text(path.description!),
                     trailing: SizedBox(
-                      height: size.height * 0.05,
+                      height: msize(context).height * 0.05,
                       child: Image.network(
                         path.image!,
                         fit: BoxFit.fill,

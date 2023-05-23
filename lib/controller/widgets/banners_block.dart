@@ -1,7 +1,8 @@
 import 'package:alippo_project/view/bannerspage.dart';
 import 'package:flutter/material.dart';
 
-import '../../model/banners_model.dart';
+import '../../model/banner/banners_model.dart';
+import '../const.dart';
 
 class BannersWidget extends StatelessWidget {
   final List<BannersModel> state;
@@ -13,9 +14,8 @@ class BannersWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
     return SizedBox(
-      height: size.height * 0.2,
+      height: msize(context).height * 0.2,
       child: ListView.builder(
           physics: const BouncingScrollPhysics(),
           scrollDirection: Axis.horizontal,
@@ -27,7 +27,10 @@ class BannersWidget extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const BannersHomePage(),
+                    builder: (context) => BannersHomePage(
+                      image: path.bannerURL!,
+                      id: path.id!,
+                    ),
                   ),
                 );
               },

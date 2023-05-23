@@ -1,5 +1,5 @@
 // bloc cubits performs when events are occured
-import 'package:alippo_project/model/banners_model.dart';
+import 'package:alippo_project/model/banner/banners_model.dart';
 import 'package:alippo_project/model/homepage_model.dart';
 import 'package:alippo_project/model/mostpopular_model.dart';
 import 'package:alippo_project/model/mostvisited_model.dart';
