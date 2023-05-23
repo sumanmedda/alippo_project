@@ -1,3 +1,4 @@
+import 'package:alippo_project/view/mostpopularpage.dart';
 import 'package:flutter/material.dart';
 
 import '../../model/mostpopular_model.dart';
@@ -29,7 +30,14 @@ class MostPopularWidget extends StatelessWidget {
                 height: 200,
                 width: 200,
                 child: InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const MostPopularPage(),
+                      ),
+                    );
+                  },
                   child: ListTile(
                     title: Text(path.title!),
                     subtitle: Text(path.description!),

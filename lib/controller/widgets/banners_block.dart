@@ -1,3 +1,4 @@
+import 'package:alippo_project/view/bannerspage.dart';
 import 'package:flutter/material.dart';
 
 import '../../model/banners_model.dart';
@@ -22,7 +23,14 @@ class BannersWidget extends StatelessWidget {
           itemBuilder: (context, index) {
             var path = state[index];
             return InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const BannersHomePage(),
+                  ),
+                );
+              },
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Image.network(path.bannerURL!),

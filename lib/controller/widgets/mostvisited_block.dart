@@ -1,3 +1,4 @@
+import 'package:alippo_project/view/mostvisitedpage.dart';
 import 'package:flutter/material.dart';
 
 import '../../model/mostvisited_model.dart';
@@ -29,7 +30,14 @@ class MostVisitedWidget extends StatelessWidget {
                 height: size.height,
                 width: size.width * 0.5,
                 child: InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const MostVisitedPage(),
+                      ),
+                    );
+                  },
                   child: ListTile(
                     title: Text(path.title!),
                     subtitle: Text(path.description!),
